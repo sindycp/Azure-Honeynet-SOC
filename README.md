@@ -1,5 +1,5 @@
 # Azure Honeynet and SOC with Real-World Cyber Attacks
-![Cloud Honeynet / SOC](https:)
+![Cloud Honeynet / SOC](https://imgur.com/uAAcV74.png)
 
 ## Introduction and Objective
 
@@ -41,13 +41,13 @@ AzureNetworkAnalytics_CL: Malicious Flows allowed into our honeynet
 
 
 ## Architecture Before Hardening and Implementing Security Controls
-![Architecture Diagram](https)
+![Architecture Diagram](https://imgur.com/ZDvrrNP.png)
 
 During the "BEFORE" stage of the project, [a virtual environment was deployed ](https://github.com) and exposed to the public to attract malicious actors and observe their attack patterns. To achieve this, a Windows virtual machine hosting a SQL database and a Linux server were deployed with their network security groups (NSGs) configured to allow all traffic. To further entice attackers, a storage account and key vault were deployed with public endpoints visible on the open internet. Throughout this stage, the unsecured environment was monitored by Microsoft Sentinel using logs aggregated by the Log Analytics workspace.
 
 ## Architecture After Hardening and Implementing Security Controls
 
-![Architecture Diagram](https)
+![Architecture Diagram](https://imgur.com/rBHH2sX.png)
 
 During the "AFTER" stage of the project, the environment was hardened and security controls were implemented to improve the environment's overall security posture. These hardening tactics included:
 
@@ -61,15 +61,15 @@ During the "AFTER" stage of the project, the environment was hardened and securi
 
 <b>This attack map illustrates the consequences of leaving the Network Security Group (NSG) open, allowing malicious traffic to flow unimpeded. It highlights the critical importance of implementing proper security measures, such as restricting NSG rules, to prevent unauthorized access and minimize potential threats.</b>
   
-![NSG Allowed Inbound Malicious Flows](https://i.imgur.com)<br>
+![NSG Allowed Inbound Malicious Flows](https://i.imgur.com/NUtUoMe.png)<br>
 
 <b>This attack map highlights the numerous syslog authentication failures experienced by the deployed Linux server, indicating unauthorized access attempts from external sources. It serves as a reminder of the importance of securing Linux servers with strong authentication mechanisms and monitoring system logs for signs of intrusion attempts.</b>
 
-![Linux Syslog Auth Failures](https://i.imgur.com)<br>
+![Linux Syslog Auth Failures](https://i.imgur.com/RPkzsFc.png?1)<br>
 
 <b>This attack map showcases numerous RDP and SMB failures, illustrating persistent attempts by potential attackers to exploit these protocols. This visualization underscores the necessity of securing remote access and file sharing services to protect against unauthorized access and potential cyber threats.</b>
 
-![Windows RDP/SMB Auth Failures](https://i.imgur.com)<br>
+![Windows RDP/SMB Auth Failures](https://i.imgur.com/ypIGuwx.png)<br>
 
 ## Attack Maps After Hardening / Security Controls
 
