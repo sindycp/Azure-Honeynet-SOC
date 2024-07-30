@@ -29,7 +29,7 @@ AzureNetworkAnalytics_CL: Malicious Flows allowed into our honeynet
 
 ## Methodology
 
-- <b>Creating the Honeynet:</b> I started by [deploying multiple vulnerable virtual machines](https://github.com) in Azure to simulate an insecure environment.
+- <b>Creating the Honeynet:</b> I started by [deploying multiple vulnerable virtual machines](https://github.com/sindycp/Azure-VM-Setup) in Azure to simulate an insecure environment.
 
 - <b>Monitoring and Analysis:</b> Azure was configured to ingest logs from various resources into a Log Analytics workspace. Microsoft Sentinel was used to build attack maps, trigger alerts, and create incidents based on the collected data.
 
@@ -43,7 +43,7 @@ AzureNetworkAnalytics_CL: Malicious Flows allowed into our honeynet
 ## Architecture Before Hardening and Implementing Security Controls
 ![Architecture Diagram](https://imgur.com/ZDvrrNP.png)
 
-During the "BEFORE" stage of the project, [a virtual environment was deployed ](https://github.com) and exposed to the public to attract malicious actors and observe their attack patterns. To achieve this, a Windows virtual machine hosting a SQL database and a Linux server were deployed with their network security groups (NSGs) configured to allow all traffic. To further entice attackers, a storage account and key vault were deployed with public endpoints visible on the open internet. Throughout this stage, the unsecured environment was monitored by Microsoft Sentinel using logs aggregated by the Log Analytics workspace.
+During the "BEFORE" stage of the project, [a virtual environment was deployed ](https://github.com/sindycp/Azure-VM-Setup) and exposed to the public to attract malicious actors and observe their attack patterns. To achieve this, a Windows virtual machine hosting a SQL database and a Linux server were deployed with their network security groups (NSGs) configured to allow all traffic. To further entice attackers, a storage account and key vault were deployed with public endpoints visible on the open internet. Throughout this stage, the unsecured environment was monitored by Microsoft Sentinel using logs aggregated by the Log Analytics workspace.
 
 ## Architecture After Hardening and Implementing Security Controls
 
